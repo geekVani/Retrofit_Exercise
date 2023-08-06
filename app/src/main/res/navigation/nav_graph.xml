@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registerFragment">
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.retrofitexercise.view.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment2"
+        android:name="com.example.retrofitexercise.view.dashboard.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment2_to_webFragment"
+            app:destination="@id/webFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.retrofitexercise.view.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment2_to_listFragment2"
+            app:destination="@id/listFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="com.example.retrofitexercise.view.dashboard.WebFragment"
+        android:label="WebFragment" >
+        <action
+            android:id="@+id/action_webFragment_to_listFragment2"
+            app:destination="@id/listFragment2" />
+    </fragment>
+</navigation>
